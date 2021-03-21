@@ -253,10 +253,10 @@ class genEPUB:
                 sOUT += "     <td class=\"hex\">%s</td>\n" % (str(hex(c)))
                 sOUT += "     <td class=\"nam\">%s</td>\n" % (self.CONTROL_CHARATERS[c])
             else:
-                sOUT += "     <td class=\"sym\">%s</td>\n" % (self.escape(unichr(c)))
+                sOUT += "     <td class=\"sym\">%s</td>\n" % (self.escape(chr(c)))
                 sOUT += "     <td class=\"dec\">%s</td>\n" % (str(c))
                 sOUT += "     <td class=\"hex\">%s</td>\n" % (str(hex(c)))
-                sOUT += "     <td class=\"nam\">%s</td>\n" % (unicodedata.name(unichr(c), "UNKNOWN NAME"))
+                sOUT += "     <td class=\"nam\">%s</td>\n" % (unicodedata.name(chr(c), "UNKNOWN NAME"))
             
             sOUT += "    </tr>\n"
         sOUT += "   </table>\n"
